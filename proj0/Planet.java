@@ -5,7 +5,6 @@ public class Planet {
 	public double yyVel;
 	public double mass;
 	public String imgFileName;
-	public Planet p;
 	private final double G = 6.67 * Math.pow(10, -11);
 
 	public Planet(double xP, double yP, double xV,
@@ -91,5 +90,11 @@ public class Planet {
 		yyPos = newPosiY;
 		xxVel = newVeloX;
 		yyVel = newVeloY;
+	}
+
+	public void draw() {
+
+		/* Stamps three copies of advice.png in a triangular pattern. */
+		StdDraw.picture(xxPos, yyPos, "./images/" + imgFileName);
 	}
 }
